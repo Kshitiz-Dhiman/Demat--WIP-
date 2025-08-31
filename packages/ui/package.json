@@ -1,13 +1,14 @@
 {
   "name": "@demat/ui",
   "version": "0.0.1",
-  "main" : "dist/index.js",
+  "main": "dist/index.js",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "./*": "./src/*.tsx",
+    "./styles": "./styles/globals.css"
   },
   "scripts": {
-    "build" : "tsc",
+    "build": "tsc",
     "sync-templates": "cpx './src/**/*.{tsx,ts}' '../cli/templates'",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
@@ -20,7 +21,9 @@
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
     "eslint": "^9.34.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "tailwindcss": "^4.1.12",
+    "@tailwindcss/postcss": "^4.1.12"
   },
   "dependencies": {
     "react": "^19.1.0",
