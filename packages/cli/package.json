@@ -1,15 +1,27 @@
 {
-  "name": "@demat/cli",
-  "bin" : {
-    "dematui" : "./bin/index.js"
-  },
+  "name": "dematui-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "dematui": "./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "main": "./dist/index.js",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup bin/index.ts --format cjs",
+    "dev": "tsup bin/index.ts --format cjs --watch"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@dematui/cli": "file:dematui-cli-1.0.0.tgz",
+    "@types/node": "^20.19.11",
+    "@types/prompts": "^2.4.9",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
 }
