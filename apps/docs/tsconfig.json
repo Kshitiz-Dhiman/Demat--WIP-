@@ -1,19 +1,20 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "@demat/typescript-config/nextjs.json",
   "compilerOptions": {
+    "moduleResolution": "bundler",
     "plugins": [
       {
         "name": "next"
-      }
+      },
     ]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
-    "next.config.js",
+    "next.config.mjs",
     ".next/types/**/*.ts"
-  ],
+, "app/about/page.mdx"  ],
   "exclude": [
     "node_modules"
   ]

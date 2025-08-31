@@ -1,8 +1,8 @@
 "use client"
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
+    <div className="p-8" style={{ padding: '2rem' }}>
+      <h1>Welcome to the Landing Page</h1>
     </div>
   );
 };
